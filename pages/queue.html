@@ -38,11 +38,11 @@
                         var d = new Date();
                             var day = d.getDay();
                             var date = d.getDate();
-                            var month = d.getMonth();
-                            var year = d.getFullYear();
-                            var daylist = new Array("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT");
-
-                                if (day === 6 || day === 0) {
+                             var month = d.getMonth() + 1;
+                        var year = d.getFullYear();
+                        var daylist = new Array("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN", "MON", "TUE", "WED", "THU");
+                      
+                        if (day === 6 || day === 0 || day === 7) { 
 
                                     document.getElementById("day").innerHTML = "<p>" + daylist[day] + " Close</p>";
                                 } else {
@@ -139,12 +139,11 @@
                         var d = new Date();
                         var day = d.getDay()+1;
                         var date = d.getDate()+1;
-                        var month = d.getMonth();
+                       var month = d.getMonth() + 1;
                         var year = d.getFullYear();
-                        var daylist = new Array("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT");
-
-                       
-                        if (day === 6 || day === 0) {
+                        var daylist = new Array("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN", "MON", "TUE", "WED", "THU");
+                      
+                        if (day === 6 || day === 0 || day === 7) { 
 
                             document.getElementById("dayy").innerHTML = "<p>" + daylist[day] + " Close</p>";
                         } else {
@@ -240,12 +239,11 @@
                         var d = new Date();
                         var day = d.getDay()+2;
                         var date = d.getDate()+2;
-                        var month = d.getMonth();
+                         var month = d.getMonth() + 1;
                         var year = d.getFullYear();
-                        var daylist = new Array("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT");
-
-                       
-                        if (day === 6 || day === 0) {
+                        var daylist = new Array("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN", "MON", "TUE", "WED", "THU");
+                      
+                        if (day === 6 || day === 0 || day === 7) { 
 
                             document.getElementById("dayyy").innerHTML = "<p>" + daylist[day] + " Close</p>";
                         } else {
@@ -341,12 +339,11 @@
                         var d = new Date();
                         var day = d.getDay() + 3;
                         var date = d.getDate() + 3;
-                        var month = d.getMonth();
+                        var month = d.getMonth() + 1;
                         var year = d.getFullYear();
-                        var daylist = new Array("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT");
-
-                        
-                            if (day === 6 || day === 0) {
+                        var daylist = new Array("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN", "MON", "TUE", "WED", "THU");
+                      
+                        if (day === 6 || day === 0 || day === 7) { 
 
                                 document.getElementById("dayyyy").innerHTML = "<p>" + daylist[day] + " Close</p>";
                             } else {
@@ -441,11 +438,11 @@
                         var d = new Date();
                         var day = d.getDay() + 4;
                         var date = d.getDate() + 4;
-                        var month = d.getMonth();
+                         var month = d.getMonth() + 1;
                         var year = d.getFullYear();
-                        var daylist = new Array("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT");
+                        var daylist = new Array("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN", "MON", "TUE", "WED", "THU");
                       
-                        if (day === 6 || day === 0 ) { 
+                        if (day === 6 || day === 0 || day === 7) { 
 
                             document.getElementById("dayyyyy").innerHTML = "<p>"+ daylist[day] +" Close</p>";
                         } else {
