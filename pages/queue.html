@@ -1,0 +1,543 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queues</title>
+    <link rel="icon" type="image/png" href="../image/favicon.png">
+    <link rel="stylesheet" href="../styles/queue.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <header>
+    <div class="container">
+        <nav class="navbar">
+            <ul>
+                <div class="a">
+                    <li>Queues</li>
+                </div>
+                <div class="icon">
+                    <li><a href="../pages/home.html"><span class="material-symbols-outlined">
+                        book_online
+                    </span>Reserve</a></li>
+                </div>
+            </ul>
+        </nav>
+    </div>
+    </header>
+
+    <div class="text">
+    <div class="status-con">
+        <div class="con">
+            <div class="content-con">
+                <div class="date">
+                    <h3 id="day"></h3>
+                    <script >
+                        var d = new Date();
+                            var day = d.getDay();
+                            var date = d.getDate();
+                            var month = d.getMonth();
+                            var year = d.getFullYear();
+                            var daylist = new Array("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT");
+
+                                if (day === 6 || day === 0) {
+
+                                    document.getElementById("day").innerHTML = "<p>" + daylist[day] + " Close</p>";
+                                } else {
+                                    var all = 'Today : ' + daylist[day] + ' ' + date + '/' + month + '/' + year;
+                                    document.getElementById("day").innerHTML = all;
+                                }
+                    </script>
+                </div>
+                <div class="que-status">
+                    <ul>
+                        <div class="que-con">
+                            <li class="free"></li>
+                            <li>Free</li>
+                        </div>
+                        <div class="que-con">
+                            <li class="inp"></li>
+                            <li>In process</li>
+                        </div>
+                        <div class="que-con">
+                            <li class="late"></li>
+                            <li>Late</li>
+                        </div>
+                        <div class="que-con">
+                            <li class="error"></li>
+                            <li>Error</li>
+                        </div>
+                    </ul>
+                
+                <table>
+                    <thead>
+                    <tr>
+                        <th>3D Printer</th>
+                        <th>Waiting</th>
+                        <th>Status</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td>506</td>
+                        <td>N previous queue</td>
+                        <td>Status</td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td>Waiting N hours</td>
+                        
+                       
+                    </tr>
+
+                    <tr>
+                        <td>507</td>
+                        <td>N previous queue</td>
+                        <td>Status</td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td>Waiting N hours</td>
+                        
+                        
+                    </tr>
+
+                    <tr>
+                        <td>508</td>
+                        <td>N previous queue</td>
+                        <td>Status</td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td>Waiting N hours</td>
+                     
+                    </tr>
+
+                    </tbody>
+                    
+
+                </table>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="con">
+            <div class="content-con">
+                <div class="date">
+                    <h3 id="dayy"></h3>
+                    <script>
+                        var d = new Date();
+                        var day = d.getDay()+1;
+                        var date = d.getDate()+1;
+                        var month = d.getMonth();
+                        var year = d.getFullYear();
+                        var daylist = new Array("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT");
+
+                       
+                        if (day === 6 || day === 0) {
+
+                            document.getElementById("dayy").innerHTML = "<p>" + daylist[day] + " Close</p>";
+                        } else {
+                            var all = daylist[day] + ' ' + date + '/' + month + '/' + year;
+                            document.getElementById("dayy").innerHTML = all;
+                        }
+                    </script>
+                </div>
+                <div class="que-status">
+                    <ul>
+                        <div class="que-con">
+                            <li class="free"></li>
+                            <li>Free</li>
+                        </div>
+                        <div class="que-con">
+                            <li class="inp"></li>
+                            <li>In process</li>
+                        </div>
+                        <div class="que-con">
+                            <li class="late"></li>
+                            <li>Late</li>
+                        </div>
+                        <div class="que-con">
+                            <li class="Error"></li>
+                            <li>error</li>
+                        </div>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>3D Printer</th>
+                                <th>Waiting</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                    
+                        <tbody>
+                            <tr>
+                                <td>506</td>
+                                <td>N previous queue</td>
+                                <td>Status</td>
+                    
+                            </tr>
+                    
+                            <tr>
+                                <td></td>
+                                <td>Waiting N hours</td>
+                    
+                    
+                            </tr>
+                    
+                            <tr>
+                                <td>507</td>
+                                <td>N previous queue</td>
+                                <td>Status</td>
+                    
+                            </tr>
+                    
+                            <tr>
+                                <td></td>
+                                <td>Waiting N hours</td>
+                    
+                    
+                            </tr>
+                    
+                            <tr>
+                                <td>508</td>
+                                <td>N previous queue</td>
+                                <td>Status</td>
+                    
+                            </tr>
+                    
+                            <tr>
+                                <td></td>
+                                <td>Waiting N hours</td>
+                    
+                            </tr>
+                    
+                        </tbody>
+                    
+                    
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="con">
+            <div class="content-con">
+                <div class="date">
+                    <h3 id="dayyy"></h3>
+                    <script>
+                        var d = new Date();
+                        var day = d.getDay()+2;
+                        var date = d.getDate()+2;
+                        var month = d.getMonth();
+                        var year = d.getFullYear();
+                        var daylist = new Array("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT");
+
+                       
+                        if (day === 6 || day === 0) {
+
+                            document.getElementById("dayyy").innerHTML = "<p>" + daylist[day] + " Close</p>";
+                        } else {
+                            var all = daylist[day] + ' ' + date + '/' + month + '/' + year;
+                            document.getElementById("dayyy").innerHTML = all;
+                        }
+                    </script>
+                </div>
+                <div class="que-status">
+                    <ul>
+                        <div class="que-con">
+                            <li class="free"></li>
+                            <li>Free</li>
+                        </div>
+                        <div class="que-con">
+                            <li class="inp"></li>
+                            <li>In process</li>
+                        </div>
+                        <div class="que-con">
+                            <li class="late"></li>
+                            <li>Late</li>
+                        </div>
+                        <div class="que-con">
+                            <li class="Error"></li>
+                            <li>error</li>
+                        </div>
+                    </ul>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>3D Printer</th>
+                                <th>Waiting</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                    
+                        <tbody>
+                            <tr>
+                                <td>506</td>
+                                <td>N previous queue</td>
+                                <td>Status</td>
+                    
+                            </tr>
+                    
+                            <tr>
+                                <td></td>
+                                <td>Waiting N hours</td>
+                    
+                    
+                            </tr>
+                    
+                            <tr>
+                                <td>507</td>
+                                <td>N previous queue</td>
+                                <td>Status</td>
+                    
+                            </tr>
+                    
+                            <tr>
+                                <td></td>
+                                <td>Waiting N hours</td>
+                    
+                    
+                            </tr>
+                    
+                            <tr>
+                                <td>508</td>
+                                <td>N previous queue</td>
+                                <td>Status</td>
+                    
+                            </tr>
+                    
+                            <tr>
+                                <td></td>
+                                <td>Waiting N hours</td>
+                    
+                            </tr>
+                    
+                        </tbody>
+                    
+                    
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="con">
+            <div class="content-con">
+                <div class="date">
+                    <h3 id="dayyyy"></h3>
+                    <script>
+                        var d = new Date();
+                        var day = d.getDay() + 3;
+                        var date = d.getDate() + 3;
+                        var month = d.getMonth();
+                        var year = d.getFullYear();
+                        var daylist = new Array("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT");
+
+                        
+                            if (day === 6 || day === 0) {
+
+                                document.getElementById("dayyyy").innerHTML = "<p>" + daylist[day] + " Close</p>";
+                            } else {
+                                var all = daylist[day] + ' ' + date + '/' + month + '/' + year;
+                                document.getElementById("dayyyy").innerHTML = all;
+                            }
+                    </script>
+                </div>
+                <div class="que-status">
+                    <ul>
+                        <div class="que-con">
+                            <li class="free"></li>
+                            <li>Free</li>
+                        </div>
+                        <div class="que-con">
+                            <li class="inp"></li>
+                            <li>In process</li>
+                        </div>
+                        <div class="que-con">
+                            <li class="late"></li>
+                            <li>Late</li>
+                        </div>
+                        <div class="que-con">
+                            <li class="Error"></li>
+                            <li>error</li>
+                        </div>
+                    </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>3D Printer</th>
+                    <th>Waiting</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+        
+            <tbody>
+                <tr>
+                    <td>506</td>
+                    <td>N previous queue</td>
+                    <td>Status</td>
+        
+                </tr>
+        
+                <tr>
+                    <td></td>
+                    <td>Waiting N hours</td>
+        
+        
+                </tr>
+        
+                <tr>
+                    <td>507</td>
+                    <td>N previous queue</td>
+                    <td>Status</td>
+        
+                </tr>
+        
+                <tr>
+                    <td></td>
+                    <td>Waiting N hours</td>
+        
+        
+                </tr>
+        
+                <tr>
+                    <td>508</td>
+                    <td>N previous queue</td>
+                    <td>Status</td>
+        
+                </tr>
+        
+                <tr>
+                    <td></td>
+                    <td>Waiting N hours</td>
+        
+                </tr>
+        
+            </tbody>
+        
+        
+        </table>
+                </div>
+            </div>
+        </div>
+        
+        <div class="con">
+            <div class="content-con">
+                <div class="date">
+                    <h3 id="dayyyyy"></h3>
+                    <script>
+                        var d = new Date();
+                        var day = d.getDay() + 4;
+                        var date = d.getDate() + 4;
+                        var month = d.getMonth();
+                        var year = d.getFullYear();
+                        var daylist = new Array("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT");
+                      
+                        if (day === 6 || day === 0 ) { 
+
+                            document.getElementById("dayyyyy").innerHTML = "<p>"+ daylist[day] +" Close</p>";
+                        } else {
+                            var all = daylist[day] + ' ' + date + '/' + month + '/' + year;
+                            document.getElementById("dayyyyy").innerHTML = all;
+                        }
+                    </script>
+                </div>
+                <div class="que-status">
+                    <ul>
+                        <div class="que-con">
+                            <li class="free"></li>
+                            <li>Free</li>
+                        </div>
+                        <div class="que-con">
+                            <li class="inp"></li>
+                            <li>In process</li>
+                        </div>
+                        <div class="que-con">
+                            <li class="late"></li>
+                            <li>Late</li>
+                        </div>
+                        <div class="que-con">
+                            <li class="Error"></li>
+                            <li>error</li>
+                        </div>
+                    </ul>
+        
+                <table>
+                    <thead>
+                        <tr>
+                            <th>3D Printer</th>
+                            <th>Waiting</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                
+                    <tbody>
+                        <tr>
+                            <td>506</td>
+                            <td>N previous queue</td>
+                            <td>Status</td>
+                
+                        </tr>
+                
+                        <tr>
+                            <td></td>
+                            <td>Waiting N hours</td>
+                
+                
+                        </tr>
+                
+                        <tr>
+                            <td>507</td>
+                            <td>N previous queue</td>
+                            <td>Status</td>
+                
+                        </tr>
+                
+                        <tr>
+                            <td></td>
+                            <td>Waiting N hours</td>
+                
+                
+                        </tr>
+                
+                        <tr>
+                            <td>508</td>
+                            <td>N previous queue</td>
+                            <td>Status</td>
+                
+                        </tr>
+                
+                        <tr>
+                            <td></td>
+                            <td>Waiting N hours</td>
+                
+                        </tr>
+                
+                    </tbody>
+                
+                
+                </table>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+
+    
+
+</body>
+
+</html>

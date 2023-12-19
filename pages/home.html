@@ -1,0 +1,138 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" type="image/png" href="../image/favicon.png">
+    <link rel="stylesheet" href="C:\Users\Tanaree\OneDrive\Desktop\B2\styles\home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <header>
+    <div class="container">
+        <nav class="navbar">
+            <ul>
+                <div class="a">
+                    <li>3D Printer</li>
+                </div>
+                <div class="icon">
+                <li><a href="../pages/status.html">
+                        <span class="material-symbols-outlined">
+                            person
+                        </span></a>
+                </li>
+                <li><a href="../index.html">
+                        <span class="material-symbols-outlined">
+                            logout
+                        </span><p>Logout</p></a>
+                </li>
+                </div>
+            </ul>
+        </nav>
+    </div>
+    </header>
+
+    <div class="m">
+    <div class="text">
+        <div class="detail">
+        <p>Service is available from Monday to Friday, 08:30 AM to 09:00 PM, excluding public holidays.
+        <br><b>Location :</b> Hardware House Room, 10th floor, Wisawavat Building.
+        <br>There are 3 machines available for service.
+        <br>
+        <span class="material-symbols-outlined">
+            priority_high
+        </span>
+        <b>Please check the schedule before making a reservation</b>
+        <span class="material-symbols-outlined">
+            priority_high
+        </span>
+        </p>
+        
+        <div class="button">
+            <a href="..\pages\queue.html">
+                <button class="first-button">
+                    <span class="material-symbols-outlined">
+                        date_range
+                    </span>
+                    Queues
+                </button>
+            </a>
+        </div>
+        </div>
+
+        <div class="data">
+            <form id="dataForm" method="get">
+                <ul>
+                <li><b>Fill in the details of the queue reservation :</b></li><br>
+                <li>
+                    <label for="project">Project name</label>
+                    <input type="text" id="project" name="project" >
+                </li>
+                <br>
+                <li>
+                    <label for = "date">Date</label>
+                    <input type="date" id="date" name="date" required oninput="checkWeekend(this)">
+                </li>
+                <script>
+                    function checkWeekend(input) {
+                        var selectedDate = new Date(input.value);
+                        var day = selectedDate.getDay();
+
+                        // Check if the selected date is Saturday (6) or Sunday (0)
+                        if (day === 0 || day === 6) {
+                            alert("Please select a weekday (Monday to Friday).");
+                            input.value = ''; // Clear the selected date
+                        }
+                    }
+                </script>
+                <br>
+                <li>
+                    <label for="printer">3D Printer</label>
+                    <input id="printer" type="number" name="printer" min="506" max="508" placeholder="506-508" required/>
+
+                </li>
+                <br>
+                <li>
+                    <label for="end">The task takes approximately</label>
+                    <input type="number" id="end" name="end" min="1"   placeholder="hours" required>
+                </li>
+                <br>
+                <button class="second-button" type="reset">Reset</button>
+                <button class="second-button" type="submit" value="Submit">Submit</button>
+                </ul>
+            </form>
+        </div>
+    </div>
+        <script>
+            document.getElementById('dataForm').addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the form from submitting and refreshing the page
+
+                // Get form values
+                var nameValue = document.getElementById('project').value;
+                var dateValue = document.getElementById('date').value;
+                var numberprinterValue = document.getElementById('printer').value
+                var numberValue = document.getElementById('end').value
+                /*var nameValue = document.getElementById('nameInput').value;
+                var emailValue = document.getElementById('emailInput').value;
+                var floatValue = parseFloat(document.getElementById('floatInput').value);*/
+
+                // Store form data in localStorage
+                localStorage.setItem('project', nameValue);
+                localStorage.setItem('date', dateValue);
+                localStorage.setItem('printer', numberprinterValue);
+                localStorage.setItem('end', numberValue);
+                
+
+                // Redirect to another page
+                window.location.href = '../pages/status.html';
+            });
+        </script>
+
+    
+
+
+</body>
+
+</html>
