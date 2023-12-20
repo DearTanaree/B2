@@ -29,3 +29,13 @@ function finishOutput(){
     var outputDiv = document.getElementById('output');
     outputDiv.innerHTML = "<p>Project name : null</p> <p>Date : null</p>  <p>3D Printer : null</p>  <p>Hour : null</p> <p>Finished !!</p> "; // Clear the output
     }
+
+function errorOutput(){
+     localStorage.removeItem('project', nameValue);
+    localStorage.removeItem('date', dateValue);
+    localStorage.removeItem('printer', numberprinterValue);
+    localStorage.removeItem('end', numberValue);
+
+    var outputDiv = document.getElementById('output');
+    outputDiv.innerHTML = "<p>Project name : null</p> <p>Date : null</p>  <p>3D Printer : null</p>  <p>Hour : null</p> <p>3D Printer Error !!</p> "; // Clear the output
+    }
